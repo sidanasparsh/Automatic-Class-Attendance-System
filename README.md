@@ -1,4 +1,4 @@
-# smartClassroom
+# Automatic Class Attendance System
 
 Architectural Flow Diagram:
 
