@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highc harts.com/modules/exporting.js"></script>
+
+</head>
+<body>
+<div id="container" style = "min-width: 310px; height: 400px; margin: 0 auto"><</div>
+<script language="JavaScript">
+    var total = {{ total_classes| safe}};
+    var attended = {{ classes_attended|safe }};
+    var courseid = '{{ course }}';
+
+
+   $(document).ready(function ()  {
+    Highcharts.chart('container', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Attendance for {{ student_name }}, for {{ course }}'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        credits:{enabled:false},
+
+              series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [ {
+                name: 'Present',
+                y: attended
+            }, {
+                name: 'Absent',
+                y: total-attended
+            }]
+        }]
+    });
+});
+
+ </script>
+</body>
+</html>

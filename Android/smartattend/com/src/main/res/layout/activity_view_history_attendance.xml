@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#ccddee"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:fontFamily="monospace"
+        android:textSize="50px"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:text="Your attendance is"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/list"/>
+
+
+</LinearLayout>

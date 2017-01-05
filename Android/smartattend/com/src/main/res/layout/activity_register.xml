@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="#ccddee"
+    android:layout_width="match_parent">
+
+    <TextView
+        android:fontFamily="monospace"
+        android:textSize="70px"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:text="Register"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:fontFamily="monospace"
+        android:textSize="50px"
+        android:layout_marginTop="25dp"
+        android:layout_width="wrap_content"
+        android:text="Full Name"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etFullName"
+        android:background="#ffffff"
+        android:hint="Eg) Barack Obama"
+        android:textSize="50px"
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:fontFamily="monospace"
+        android:textSize="50px"
+        android:layout_width="wrap_content"
+        android:text="Course Number"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etCourseNumber"
+        android:background="#ffffff"
+        android:hint="Eg) CMPE273"
+        android:textSize="50px"
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:fontFamily="monospace"
+        android:textSize="50px"
+        android:layout_width="wrap_content"
+        android:text="SJSU ID"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etSJSUID"
+        android:background="#ffffff"
+        android:hint="Eg) 011439337"
+        android:textSize="50px"
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:fontFamily="monospace"
+        android:textSize="50px"
+        android:layout_width="wrap_content"
+        android:text="Password"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:background="#ffffff"
+        android:hint="Enter SJSU password"
+        android:textSize="50px"
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:inputType="textPassword"
+        android:layout_height="wrap_content" />
+
+    <Button
+
+        android:id="@+id/bRegister"
+        android:text="Register"
+        android:layout_marginTop="20dp"
+        android:onClick="register"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

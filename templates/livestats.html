@@ -1,0 +1,28 @@
+<head>
+<script type="text/javascript">
+var timer = function() {
+    setTimeout(function(){ window.location.reload(); }, 1500);
+};
+timer();
+</script>
+</head>
+
+<body>
+
+
+<div style="width: 50%; float:left">
+   <p><b>List of present Students:</b></p>
+    {% for student in listOfPresentStudents %}
+    <p>{{ student }}</p>
+    {% endfor %}
+</div>
+
+<div style="width: 50%; float:right">
+
+<p><b>List of Absent Students:</b></p>
+{% for student in listOfAbsentStudents %}
+    <p>{{ student }}</p>
+{% endfor %}
+</div>
+
+</body>

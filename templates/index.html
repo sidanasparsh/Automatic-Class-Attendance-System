@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highc harts.com/modules/exporting.js"></script>
+
+</head>
+<body>
+<div id="container" style = "min-width: 310px; height: 400px; margin: 0 auto"><</div>
+<script language="JavaScript">
+    var attend = {{ attendance| safe}};
+    var dater = {{ date|safe }};
+    var courseid = '{{ course }}';
+
+    $(document).ready(function () {
+    Highcharts.chart('container', {
+        title: {
+            text: "Total Attendance for "+ courseid,
+            x: -20 //center
+        },
+        subtitle: {
+            text: 'Source: Automatic Attendance System',
+            x: -20
+        },
+        xAxis: {
+            categories: dater
+        },
+        yAxis: {
+            title: {
+                text: 'Students Present'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: 'student(s) present'
+        },
+        credits:{enabled: false},
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: courseid,
+            data: attend
+        }]
+    });
+});
+ </script>
+</body>
+</html>

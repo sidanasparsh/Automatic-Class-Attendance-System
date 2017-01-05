@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical" android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+<TextView
+    android:layout_marginTop="10dp"
+    android:background="@android:color/darker_gray"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:textColor="#bbbbbb"
+    android:textSize="24dp"
+    android:id="@+id/date"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentLeft="true"/>
+
+<TextView
+    android:background="@android:color/darker_gray"
+    android:layout_width="match_parent"
+    android:textSize="24dp"
+    android:textColor="#bbbbbb"
+    android:id="@+id/mark"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/date"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentLeft="true"/>
+
+<TextView
+    android:background="@android:color/darker_gray"
+    android:layout_height="wrap_content"
+    android:textSize="24dp"
+    android:layout_width="match_parent"
+    android:textColor="#bbbbbb"
+    android:id="@+id/checkInTime"
+    android:layout_below="@+id/mark"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentLeft="true"/>
+
+<TextView
+    android:background="@android:color/darker_gray"
+    android:layout_height="wrap_content"
+    android:textSize="24dp"
+    android:layout_width="match_parent"
+    android:textColor="#bbbbbb"
+    android:id="@+id/checkOutTime"
+    android:layout_below="@+id/checkInTime"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentLeft="true"/>
+
+</RelativeLayout>
